@@ -1,0 +1,22 @@
+<?php
+
+$dia[0] = "Lunes";
+$dia[1] = "Martes";
+$dia[2] = "Miercoles";
+$dia[3] = "Jueves";
+$dia[4] = "Viernes";
+$dia[5] = "Sabado";
+$dia[6] = "Domingo";
+
+$hoy = date("N") - 1;
+print("El valor de hoy: $hoy");
+print("<br>Hoy es: $dia[$hoy]");
+
+print("<h4>Los dias son</h4>");
+for($i = 0; $i < count($dia); $i++){
+    if ($i == $hoy){
+        print("<button>$dia[$i]</button><br>");
+    }else{
+    print($dia[$i]."<br>");
+    }
+}
